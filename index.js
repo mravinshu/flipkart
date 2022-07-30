@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
 
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 5000;
 
 const password = encodeURIComponent("Rawinshoe@1");
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.end()
 })
 
-app.use(cors())
+// app.use(cors())
 
 mongoose.connect(url,{useNewUrlParser:true})
 
