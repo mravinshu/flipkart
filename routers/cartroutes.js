@@ -7,7 +7,7 @@ const cart = require('../models/cart');
 router.get('/:id', async (req, res) => {
     console.log(req);
     try {
-        const cartItem = await cart.find()
+        const cartItem = await cart.findById(req.params.id)
         res.json(cartItem);
     } catch (error) {
         res.send('Error: ' + error);
